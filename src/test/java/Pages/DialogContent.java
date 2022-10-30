@@ -95,6 +95,12 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//h3[text()='Sepetinizde ürün bulunmuyor']")
     public WebElement verifyNoItems;
 
+    @FindBy(xpath = "//button[@data-identifier='searchButton']")
+    public WebElement searchButton;
+
+    @FindBy(xpath ="//div[@class='samsung-esis-container']//a [@href=\"https://www.mediamarkt.com.tr/tr/category/_samsung-tv-793009.html\"]")
+    public WebElement TVsearch;
+
 
     WebElement myElement;
 
@@ -188,6 +194,14 @@ public class DialogContent extends Parent {
                 myElement = removeProductButton;
                 break;
 
+            case "searchButton":
+                myElement = searchButton;
+                break;
+
+            case "TVsearch":
+               myElement = TVsearch;
+                break;
+
 
         }
 
@@ -210,5 +224,15 @@ public class DialogContent extends Parent {
 
         verifyContainsText(myElement, text);
     }
+    public void ScrollToElementClickFunction(String strElement){
+
+//        switch (strElement) {
+//
+//            case "TVsearch":
+//                myElement = TVsearch;
+//                break;
+//        }
+//      clickFunction(myElement);
+   }
 
 }
