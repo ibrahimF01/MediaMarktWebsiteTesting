@@ -95,6 +95,15 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//h3[text()='Sepetinizde ürün bulunmuyor']")
     public WebElement verifyNoItems;
 
+    @FindBy(xpath = "//img[@alt='MediaTrend']")
+    private WebElement mediaTrendImg;
+
+    @FindBy(css = "button[type='button'][class='layer-close']")
+    private WebElement mediaTrendVideoCloseButton;
+
+    @FindBy(className = "alignnone")
+    private WebElement downloadMagazineImg;
+
 
     WebElement myElement;
 
@@ -188,7 +197,17 @@ public class DialogContent extends Parent {
                 myElement = removeProductButton;
                 break;
 
+            case "mediaTrendImg":
+                myElement = mediaTrendImg;
+                break;
 
+            case "downloadMagazineImg":
+                myElement = downloadMagazineImg;
+                break;
+
+            case "mediaTrendVideoCloseButton":
+                myElement = mediaTrendVideoCloseButton;
+                break;
         }
 
         clickFunction(myElement);
