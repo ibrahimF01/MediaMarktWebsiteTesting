@@ -4,8 +4,7 @@ Feature: Adding Products and Payment Functionality
     Given Navigate to MediaMarkt
     When Verify that you are on the home page
     And Type Samsung the search box and click enter
-    #And click on tvs
-    And Click on the random product
+    And Click on the random Saat samsung product
     And Click add to cart
     And Click on the additional insurance
     And Add to cart and click continue

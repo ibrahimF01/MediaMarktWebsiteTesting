@@ -104,6 +104,10 @@ public class DialogContent extends Parent {
     @FindBy(className = "alignnone")
     private WebElement downloadMagazineImg;
 
+    @FindBy(xpath = "//button[@data-identifier='searchButton']")
+    public WebElement searchButton;
+
+
 
     WebElement myElement;
 
@@ -150,6 +154,7 @@ public class DialogContent extends Parent {
 
     public void findAndClick(String strElement) {
         int rnd = (int) (Math.random() * productSelection.size());
+
 
         switch (strElement) {
 
@@ -207,6 +212,11 @@ public class DialogContent extends Parent {
 
             case "mediaTrendVideoCloseButton":
                 myElement = mediaTrendVideoCloseButton;
+                break;
+
+
+            case "searchButton":
+                myElement = searchButton;
                 break;
         }
 
