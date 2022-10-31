@@ -139,6 +139,7 @@ public class DialogContent extends Parent {
     public WebElement compare1;
 
 
+
     WebElement myElement;
 
     public void findAndSend(String strElement, String value) {

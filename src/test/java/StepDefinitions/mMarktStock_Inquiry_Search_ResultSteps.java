@@ -20,6 +20,7 @@ public class mMarktStock_Inquiry_Search_ResultSteps {
         //dc.findAndClick("kisiselBakim");
         dc.findAndClick("anladim");
         wait.until(ExpectedConditions.visibilityOf(dc.kisiselBakim)).click();
+
     }
 
     @And("Click on Male Grooming products")
