@@ -107,6 +107,26 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//button[@data-identifier='searchButton']")
     public WebElement searchButton;
 
+    @FindBy(xpath = "//h3[text()='Kişisel Bakım']")
+    public WebElement kisiselBakim;
+
+    @FindBy(xpath = "//span[text()='Anladım']")
+    public WebElement anladim;
+
+    @FindBy(xpath = "(//map[@name='map_11384544_h1w4']/area)[1]")
+    public WebElement erkekBakimUrunleri;
+
+    @FindBy(xpath = "//button[text()='En Yüksek Fiyat']")
+    public WebElement enYuksekFiyat;
+
+    @FindBy(xpath = "(//ul[@class='products-list']/li//img)[1]")
+    public WebElement enPahaliErkekBakimUrunu;
+
+    @FindBy(xpath = "//a[contains(text(),'Stok Sorgulama')]")
+    public WebElement stokSorgulamaBtn;
+
+    @FindBy(xpath = "//div[@class='search-box-holder']//input")
+    public WebElement stokSorgulamaArama;
 
     ///ORCUN//////////////////////////////////
     @FindBy(xpath = "//a[text()='Tüm Kategoriler']")
@@ -117,6 +137,7 @@ public class DialogContent extends Parent {
 
     @FindBy(css = "span[class^='site-navigation2__link-label']")
     public WebElement compare1;
+
 
 
     WebElement myElement;
@@ -154,6 +175,9 @@ public class DialogContent extends Parent {
                 break;
             case "mobileInput":
                 myElement = mobileInput;
+                break;
+            case "stokSorgulamaArama":
+                myElement = stokSorgulamaArama;
                 break;
 
 
@@ -227,6 +251,30 @@ public class DialogContent extends Parent {
 
             case "searchButton":
                 myElement = searchButton;
+                break;
+
+            case "anladim":
+                myElement = anladim;
+                break;
+
+            case "kisiselBakim":
+                myElement = kisiselBakim;
+                break;
+
+            case "erkekBakimUrunleri":
+                myElement = erkekBakimUrunleri;
+                break;
+
+            case "enYuksekFiyat":
+                myElement = enYuksekFiyat;
+                break;
+
+            case "enPahaliErkekBakimUrunu":
+                myElement = enPahaliErkekBakimUrunu;
+                break;
+
+            case "stokSorgulamaBtn":
+                myElement = stokSorgulamaBtn;
                 break;
         }
 
