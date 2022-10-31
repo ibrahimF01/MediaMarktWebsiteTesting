@@ -95,11 +95,14 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//h3[text()='Sepetinizde ürün bulunmuyor']")
     public WebElement verifyNoItems;
 
-    @FindBy(xpath = "//button[@data-identifier='searchButton']")
-    public WebElement searchButton;
+    @FindBy(xpath = "//img[@alt='MediaTrend']")
+    private WebElement mediaTrendImg;
 
-    @FindBy(xpath ="//div[@class='samsung-esis-container']//a [@href=\"https://www.mediamarkt.com.tr/tr/category/_samsung-tv-793009.html\"]")
-    public WebElement TVsearch;
+    @FindBy(css = "button[type='button'][class='layer-close']")
+    private WebElement mediaTrendVideoCloseButton;
+
+    @FindBy(className = "alignnone")
+    private WebElement downloadMagazineImg;
 
 
     WebElement myElement;
@@ -194,15 +197,17 @@ public class DialogContent extends Parent {
                 myElement = removeProductButton;
                 break;
 
-            case "searchButton":
-                myElement = searchButton;
+            case "mediaTrendImg":
+                myElement = mediaTrendImg;
                 break;
 
-            case "TVsearch":
-               myElement = TVsearch;
+            case "downloadMagazineImg":
+                myElement = downloadMagazineImg;
                 break;
 
-
+            case "mediaTrendVideoCloseButton":
+                myElement = mediaTrendVideoCloseButton;
+                break;
         }
 
         clickFunction(myElement);
@@ -224,15 +229,5 @@ public class DialogContent extends Parent {
 
         verifyContainsText(myElement, text);
     }
-    public void ScrollToElementClickFunction(String strElement){
-
-//        switch (strElement) {
-//
-//            case "TVsearch":
-//                myElement = TVsearch;
-//                break;
-//        }
-//      clickFunction(myElement);
-   }
 
 }
