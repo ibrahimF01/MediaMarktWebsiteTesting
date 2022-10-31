@@ -15,7 +15,7 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.time.Duration;
 
-public class mMarktAddProdSteps{
+public class                        mMarktAddProdSteps{
     DialogContent dc=new DialogContent();
     Actions actions=new Actions(GWD.getDriver());
     WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
