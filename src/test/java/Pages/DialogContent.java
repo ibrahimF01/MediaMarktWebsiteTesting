@@ -128,6 +128,16 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//div[@class='search-box-holder']//input")
     public WebElement stokSorgulamaArama;
 
+    ///ORCUN//////////////////////////////////
+    @FindBy(xpath = "//a[text()='Tüm Kategoriler']")
+    public WebElement categories;
+
+    @FindBy(css = "span[class^='site-navigation2__link-label']")
+    public List<WebElement> list;
+
+    @FindBy(css = "span[class^='site-navigation2__link-label']")
+    public WebElement compare1;
+
 
     WebElement myElement;
 
