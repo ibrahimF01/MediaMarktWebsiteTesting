@@ -16,7 +16,7 @@ public class Parent {
 
 
         waitUntilVisible(element);
-        scrollToElement(element);
+       // scrollToElement(element);
         element.clear();
         element.sendKeys(value);
     }
@@ -33,7 +33,7 @@ public class Parent {
 
     public void clickFunction(WebElement element)
     {
-        scrollToElement(element);
+      //  scrollToElement(element);
         waitUntilClickable(element);
         element.click();
     }

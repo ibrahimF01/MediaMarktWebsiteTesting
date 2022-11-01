@@ -138,6 +138,53 @@ public class DialogContent extends Parent {
     @FindBy(css = "span[class^='site-navigation2__link-label']")
     public WebElement compare1;
 
+    @FindBy(xpath = "//span[text()='Hesabım']")
+    public WebElement hesabım;
+
+    @FindBy(css = "a[data-tracking=\"login\"]")
+    public WebElement uyeOl;
+
+    @FindBy(id = "tqa_register_personTitleMrs")
+    public WebElement cinsiyet;
+
+    //yazı
+    @FindBy(name = "firstName")
+    public WebElement name;
+
+    @FindBy(name = "lastName")
+    public WebElement lastName;
+
+    @FindBy(name = "phone2")
+    public WebElement phone;
+
+    @FindBy(name = "email1")
+    public WebElement eposta;
+
+    @FindBy(name = "logonPassword")
+    public WebElement password;
+
+    @FindBy(name = "logonPasswordVerify")
+    public WebElement passwordAgain;
+
+    @FindBy(name = "isNewsletterAtRegistrationActive")
+    public WebElement sozlesmeOnay;
+
+    @FindBy(id = "my-account-register-submit")
+    public WebElement submitButton;
+
+    @FindBy(css = "span[data-identifier=\"myprofile_salutation_line1\"]")
+    public WebElement hesapDogrulama;
+
+    @FindBy(xpath = "//span[text()='Anladım']")
+    public WebElement pupup;
+
+
+
+
+
+
+
+
 
 
     WebElement myElement;
@@ -179,6 +226,34 @@ public class DialogContent extends Parent {
             case "stokSorgulamaArama":
                 myElement = stokSorgulamaArama;
                 break;
+
+            case "name":
+                myElement = name;
+                break;
+
+            case "lastName":
+                myElement = lastName;
+                break;
+
+            case "phone":
+                myElement = phone;
+                break;
+
+            case "eposta":
+                myElement = eposta;
+                break;
+
+            case "password":
+                myElement = password;
+                break;
+
+            case "passwordAgain":
+                myElement = passwordAgain;
+                break;
+
+
+
+
 
 
         }
@@ -276,6 +351,36 @@ public class DialogContent extends Parent {
             case "stokSorgulamaBtn":
                 myElement = stokSorgulamaBtn;
                 break;
+
+            case "hesabım":
+                myElement = hesabım;
+                break;
+
+            case "uyeOl":
+                myElement = uyeOl;
+                break;
+
+            case "cinsiyet":
+                myElement = cinsiyet;
+                break;
+
+            case "sozlesmeOnay":
+                myElement = sozlesmeOnay;
+                break;
+
+            case "submitButton":
+                myElement = submitButton;
+                break;
+
+            case "pupup":
+                myElement = pupup;
+                break;
+
+
+
+
+
+
         }
 
         clickFunction(myElement);
@@ -291,6 +396,10 @@ public class DialogContent extends Parent {
                 break;
             case "verifyNoItems":
                 myElement = verifyNoItems;
+                break;
+
+            case "hesapDogrulama":
+                myElement = hesapDogrulama;
                 break;
 
         }
