@@ -38,7 +38,7 @@ public class DialogContent extends Parent {
     @FindBy(id = "userForm-email")
     private WebElement withoutRegistrationEmailInput;
 
-    @FindBy(id = "nextButton")
+    @FindBy(xpath = "//*[@id='nextButton']")
     public WebElement continueButton2; //kaydet butonu ile aynı
 
     @FindBy(id = "radio-male")
@@ -80,8 +80,8 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "(//select[@ng-model='vm.value'])[3]")
     public WebElement selectYear;
 
-    @FindBy(name = "customerContract")
-    private WebElement contractCheckButton;
+    @FindBy(xpath = "//*[@class='coform-checkbox']")
+    public WebElement contractCheckButton;
 
     @FindBy(name = "customerContract")
     private WebElement saveButton;
@@ -177,6 +177,18 @@ public class DialogContent extends Parent {
 
     @FindBy(xpath = "//span[text()='Anladım']")
     public WebElement pupup;
+
+    @FindBy(xpath = "//*[text()='En Yüksek Fiyat']")
+    public WebElement mostExpensivePrice;
+
+    @FindBy(xpath = "//*[@title='Samsung 85Qn900B 85']")
+    public WebElement mostExpensiveTV;
+
+    @FindBy(xpath = "//*[@class='cocheckout-actions']")
+    public WebElement devam;
+
+
+
 
 
 
@@ -375,6 +387,19 @@ public class DialogContent extends Parent {
             case "pupup":
                 myElement = pupup;
                 break;
+
+            case "mostExpensivePrice":
+                myElement = mostExpensivePrice;
+                break;
+
+            case "mostExpensiveTV":
+                myElement = mostExpensiveTV;
+                break;
+
+            case "devam":
+                myElement = devam;
+                break;
+
 
 
 
