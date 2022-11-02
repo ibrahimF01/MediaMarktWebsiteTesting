@@ -17,7 +17,7 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.time.Duration;
 
-public class                        mMarktAddProdSteps{
+public class mMarktAddProdSteps{
     DialogContent dc=new DialogContent();
     Actions actions=new Actions(GWD.getDriver());
     WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
@@ -78,7 +78,7 @@ public class                        mMarktAddProdSteps{
     @And("Click on the continue")
     public void clickOnTheContinue() {
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Devam']"))).click();
-      //  dc.findAndClick("continueButton");
+        // dc.findAndClick("continueButton");
     }
 
     @And("Click on the continue without registration")
@@ -110,14 +110,14 @@ public class                        mMarktAddProdSteps{
 
         dc.findAndSend("mobileInput","+905000000000");
 
-       Select day=new Select(dc.selectDay);
-       day.selectByIndex(1);
-       GWD.Bekle(1);
-       Select month=new Select(dc.selectMonth);
-       month.selectByIndex(5);
-       GWD.Bekle(1);
-       Select year=new Select(dc.selectYear);
-       year.selectByIndex(17);
+        Select day=new Select(dc.selectDay);
+        day.selectByIndex(1);
+        GWD.Bekle(1);
+        Select month=new Select(dc.selectMonth);
+        month.selectByIndex(5);
+        GWD.Bekle(1);
+        Select year=new Select(dc.selectYear);
+        year.selectByIndex(17);
 
         WebElement element=GWD.driver.findElement(By.xpath("//*[@name='customerContract']"));
         JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
