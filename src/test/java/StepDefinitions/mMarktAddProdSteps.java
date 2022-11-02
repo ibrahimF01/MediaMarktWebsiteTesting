@@ -5,7 +5,9 @@ import Utilities.GWD;
 import io.cucumber.java.en.*;
 import junit.framework.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -76,7 +78,7 @@ public class                        mMarktAddProdSteps{
     @And("Click on the continue")
     public void clickOnTheContinue() {
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Devam']"))).click();
-       // dc.findAndClick("continueButton");
+      //  dc.findAndClick("continueButton");
     }
 
     @And("Click on the continue without registration")
@@ -108,16 +110,19 @@ public class                        mMarktAddProdSteps{
 
         dc.findAndSend("mobileInput","+905000000000");
 
-        Select day=new Select(dc.selectDay);
-        day.selectByIndex(1);
-        GWD.Bekle(1);
-        Select month=new Select(dc.selectMonth);
-        month.selectByIndex(5);
-        GWD.Bekle(1);
-        Select year=new Select(dc.selectYear);
-        year.selectByIndex(17);
+       Select day=new Select(dc.selectDay);
+       day.selectByIndex(1);
+       GWD.Bekle(1);
+       Select month=new Select(dc.selectMonth);
+       month.selectByIndex(5);
+       GWD.Bekle(1);
+       Select year=new Select(dc.selectYear);
+       year.selectByIndex(17);
 
-        dc.findAndClick("contractCheckButton");
+        WebElement element=GWD.driver.findElement(By.xpath("//*[@name='customerContract']"));
+        JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
+        js.executeScript("arguments[0].scrollIntoView();", element);
+        element.click();
         dc.findAndClick("continueButton2");//kaydetme adımı
         //Not:Arka arkaya test edildiğinde sistem robot olarak algılayıp resimdeki yazıyı girmemizi istiyor. O kısmı manuel geçiniz.
 
