@@ -1,5 +1,5 @@
-Feature: Adding Products and Payment Functionality
-  Scenario: Adding Product and Payment
+Feature: Adding Products And Payment Functionality
+  Scenario: Adding Product And Payment
 
     Given Navigate to MediaMarkt
     When Verify that you are on the home page
@@ -15,6 +15,5 @@ Feature: Adding Products and Payment Functionality
     And Click on the payment method
     And Click on the remove product from cart
     Then Verify that there are no items in the cart
-
 
 
