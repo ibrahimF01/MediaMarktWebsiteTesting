@@ -119,7 +119,7 @@ public class MediaMarketAddingOA {
 
         GWD.Bekle(2);
         dc.findAndSend("mobileInput","+905000000001");
-
+        dc.scrollToElement(dc.littleCheck);
         dc.findAndClick("littleCheck");
 
         dc.scrollToElement(dc.continueButton2);
