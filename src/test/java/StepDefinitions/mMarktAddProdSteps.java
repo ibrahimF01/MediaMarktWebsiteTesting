@@ -130,6 +130,8 @@ public class mMarktAddProdSteps{
 
     @And("Click on the payment method")
     public void clickOnThePaymentMethod() {
+
+        dc.scrollToElement(dc.continueButton3);
         wait.until(ExpectedConditions.elementToBeClickable(dc.continueButton3));
         dc.findAndClick("continueButton3");
         dc.findAndClick("continueButton3");//again..

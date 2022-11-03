@@ -188,16 +188,47 @@ public class DialogContent extends Parent {
     public WebElement devam;
 
 
+    @FindBy(css = "[data-identifier='category-tree-navigation']")
+    public WebElement AllCategories;
 
+    @FindBy(xpath = "(//span[contains(text(),'Bilgisayar')])[1]")
+    public WebElement Computer01;
 
+    @FindBy(xpath = "(//span[contains(text(),'Laptop Aksesuarları')])[1]")
+    public WebElement laptopAccesiors;
 
+    @FindBy(xpath = "//span[text()='Anladım']")
+    public WebElement cookieOk;
 
+    @FindBy(xpath = "(//input[@class='facet-search'])[1]")
+    public WebElement brandSearch;
 
+    @FindBy(xpath = "//input[contains(@value,'filterbrand=DAYTONA')]")
+    public WebElement daytona;
 
+    @FindBy(xpath = "//a[contains(text(),'DAYTONA DYT803 Ayarlanabilir Taşınabiilir Aluminyum Laptop Standı Gümüş')]")
+    public WebElement DAYTONADYT803;
 
+    @FindBy(xpath = "(//a[contains(text(),'Mağaza Stok Durumu')])[1]")
+    public WebElement stokStation;
 
+    @FindBy(xpath = "//h3[contains(text(),'İSTANBUL | ÖZDİLEK PARK AVM')]")
+    public WebElement ozdilekAVM;
 
+    @FindBy(xpath = "//iframe[contains(@title,'Stok Durumu Görüntüle')]")
+    public WebElement frameStokMap;
 
+    @FindBy(css = "g[data-name='close']")
+    public WebElement closedStok;
+
+    @FindBy(css = "[id='pdp-add-to-cart']")
+    public WebElement addToCartDayota;
+
+    @FindBy(css = "[class='cototal-price ng-binding']")
+    public WebElement productPrice;
+
+    @FindBy(xpath = "//*[@name='customerContract']")
+    public WebElement littleCheck;
 
     WebElement myElement;
 
@@ -263,6 +294,9 @@ public class DialogContent extends Parent {
                 myElement = passwordAgain;
                 break;
 
+            case "brandSearch":
+                myElement = brandSearch;
+                break;
 
 
 
@@ -401,10 +435,37 @@ public class DialogContent extends Parent {
                 break;
 
 
+            case "laptopAccesiors":
+                myElement = laptopAccesiors;
+                break;
 
+            case "cookieOk":
+                myElement = cookieOk;
+                break;
 
+            case "daytona":
+                myElement = daytona;
+                break;
 
+            case "DAYTONADYT803":
+                myElement = DAYTONADYT803;
+                break;
 
+            case "stokStation":
+                myElement = stokStation;
+                break;
+
+            case "closedStok":
+                myElement = closedStok;
+                break;
+
+            case "addToCartDayota":
+                myElement = addToCartDayota;
+                break;
+
+            case "littleCheck":
+                myElement = littleCheck;
+                break;
 
         }
 
